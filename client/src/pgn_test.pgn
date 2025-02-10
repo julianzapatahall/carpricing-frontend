@@ -1,0 +1,20 @@
+[Event "Casual Bullet game"]
+[Site "https://lichess.org/CEIuVLVH"]
+[Date "2024.03.14"]
+[White "Anonymous"]
+[Black "Anonymous"]
+[Result "0-1"]
+[UTCDate "2024.03.14"]
+[UTCTime "19:48:20"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[Variant "Standard"]
+[TimeControl "60+0"]
+[ECO "A40"]
+[Opening "Mikenas Defense"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. d4 { [%clk 0:01:00] } 1... Nc6 { [%clk 0:01:00] } { A40 Mikenas Defense } { White resigns. } 0-1
+
+
