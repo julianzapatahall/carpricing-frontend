@@ -17,26 +17,15 @@
     padding: 100px 20px;
 }
 .frozen {
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  position: fixed; /* Freeze the viewport */
+  overflow-x: auto; /* Prevent horizontal scrolling */
+  position: relative; /* Freeze the viewport */
+  overflow-y: auto;
   width: 1200px; /* Set fixed width */
   height: 100%; /* Cover full height */
   top: 0;
   left: 0;
 }
 
-
-.question-mark {
-  position: fixed;
-  bottom:250px;
-  left: 550px;
-  height: 400px;
-  background-size: cover;
-  color: #FFAA33;
-  text-align: center;
-  font-size: 200px;
-  padding: 10px 20px;
-}
 
 .hero {
     background-image: url('pls2.png'); /* Add background image */
@@ -125,9 +114,9 @@
 }
 
 .adv-filter-button{
-  position: fixed;
+  position: absolute;
   left: 125px;
-  top:115px;
+  top:35px;
   background-color: #f4f4f9;
   color: #333;
   padding: 10px 20px;
@@ -739,7 +728,8 @@ nav ul li .prepare-link {
     background-color: #f4f4f9;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: hidden; /* Prevent horizontal scrolling */
+
   }/* Reset default styles */
 * {
   margin: 0;
