@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a5850e5c.css",
+    "main.js": "/static/js/main.d9a1438f.js",
+    "static/js/453.89f587e0.chunk.js": "/static/js/453.89f587e0.chunk.js",
+    "static/media/notgonnawork.png": "/static/media/notgonnawork.dbb17e872ca2ce4896ab.png",
+    "static/media/much_darker_green_notgonnawork.png": "/static/media/much_darker_green_notgonnawork.1224be07323c6f173abe.png",
+    "static/media/pls2.png": "/static/media/pls2.0ffc4095e91c0231b228.png",
+    "static/media/squarechesslogolong.png": "/static/media/squarechesslogolong.b8525b1d001ae9cadc6c.png",
+    "static/media/checkmatewizard_transparent.png": "/static/media/checkmatewizard_transparent.67b32b5cc0bf85feadf7.png",
+    "static/media/squarechesslogolongwhite.png": "/static/media/squarechesslogolongwhite.c6f47f048bf2d1757a80.png",
+    "index.html": "/index.html",
+    "main.a5850e5c.css.map": "/static/css/main.a5850e5c.css.map",
+    "main.d9a1438f.js.map": "/static/js/main.d9a1438f.js.map",
+    "453.89f587e0.chunk.js.map": "/static/js/453.89f587e0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5850e5c.css",
+    "static/js/main.d9a1438f.js"
+  ]
+}
