@@ -1217,10 +1217,12 @@ const WeaknessFinder = () => {
                                     <button className={inputMethod === 'chesscom' ? 'tablinks active' : 'tablinks'} onClick={() => setInputMethod('chesscom')}>Chess.com</button>
                                     <button className={inputMethod === 'lichess' ? 'tablinks active' : 'tablinks'} onClick={() => setInputMethod('lichess')}>Lichess</button>
                                     <button className={inputMethod === 'pgn' ? 'tablinks active' : 'tablinks'} onClick={() => setInputMethod('pgn')}>PGN</button>
+                                  <div className="tabcontent" style={{ display: inputMethod === 'pgn' ? 'block' : 'none', position:'fixed' }}>
+                                    <input type="file" onChange={handleFileSelect} />
+                                    </div>
                                 </div>
                                 <div className="tabcontent" style={{ display: inputMethod === 'pgn' ? 'block' : 'none' }}>
                                     <div className="form-group">
-                                        <input type="file" onChange={handleFileSelect} />
                                         <label htmlFor="opponentName">Player Name:</label>
                                         <input
                                             type="text"

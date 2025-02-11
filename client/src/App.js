@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation  } from 'react-router-dom';
 import LandingPage from './LandingPage';
 import StockfishGamePage from './StockfishGamePage';
 import AnalysisBoardPage from './AnalysisBoardPage';
@@ -9,12 +9,29 @@ import WeaknessFinder from './WeaknessFinder';
 import FeedbackPage from './FeedbackPage';
 import TreeExplorer from './TreeExplorer';
 
+function TitleUpdater() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const titles = {
+      "/": "Home | CheckmateWizard",
+      "/analysis-board": "Analysis Board | CheckmateWizard",
+      "/weakness-finder": "Weakness Finder | CheckmateWizard",
+      "/blunder-punisher": "Blunder Punisher | CheckmateWizard",
+      "/feedback": "Feedback | CheckmateWizard",
+    };
+    document.title = titles[location.pathname] || "CheckmateWizard";
+  }, [location]);
+
+  return null;
+}
+
 // Global error handlers
 window.onerror = (message, source, lineno, colno, error) => {
   if (error?.message?.includes('ArrayBuffer allocation failed')) {
-    displayErrorBanner('Array Buffer Allocation Failed');
+    displayErrorBanner('ERROR: Array Buffer Allocation Failed');
   } else {
-    displayErrorBanner('Unexpected error encountered');
+    displayErrorBanner('ERROR: Unexpected error encountered');
   }
   // Return true to prevent the default error handling
   return true;
@@ -22,9 +39,9 @@ window.onerror = (message, source, lineno, colno, error) => {
 
 window.onunhandledrejection = (event) => {
   if (event.reason?.message?.includes('ArrayBuffer allocation failed')) {
-    displayErrorBanner('Array Buffer Allocation Failed');
+    displayErrorBanner('ERROR: Array Buffer Allocation Failed');
   } else {
-    displayErrorBanner('Unexpected error encountered');
+    displayErrorBanner('ERROR: Unexpected error encountered');
   }
   // Return true to prevent the default error handling
   return true;
@@ -109,7 +126,7 @@ function App() {
 
   return (
       <Router>
-        <div>
+        <TitleUpdater />
           <Routes>
             <Route exact path="/" element={<LandingPage />} />
             <Route path="/play-stockfish" element={<StockfishGamePage />} />
@@ -120,7 +137,6 @@ function App() {
             <Route path="/feedback" element={<FeedbackPage />} />
             <Route path="/signup" element={<SignupPage />} />
           </Routes>
-        </div>
       </Router>
   );
 }

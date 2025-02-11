@@ -486,7 +486,7 @@ nav ul li .prepare-link {
     }
   
   .move-history {
-    position: relative;
+    position:  relative;
     z-index: 2;
     width: 24%; /* Adjust based on your layout */
     overflow-y: auto;
