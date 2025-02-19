@@ -18,29 +18,32 @@ const AnalysisBoardPage = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1200);
     
-
+//const isNowMobile = window.innerWidth < 1290;
     // Event listener for window resize
-    useEffect(() => {
-                const handleResize = () => {
-                    const isNowMobile = window.innerWidth < 1200;
-                    setIsMobile(isNowMobile);
-            
-                    if (isNowMobile) {
-                        console.log('Applying frozen class');
-                        document.body.classList.add('frozen');
-                    } else {
-                        console.log('Removing frozen class');
-                        document.body.classList.remove('frozen');
-                    }
-                };
-            
-                window.addEventListener('resize', handleResize);
-            
-                handleResize();
-            
-                return () => window.removeEventListener('resize', handleResize);
-            }, []);
-            
+useEffect(() => {
+    const handleResize = () => {
+        const isNowMobile = window.innerWidth < 1200;
+        const shouldFreeze = window.innerWidth < 1290;
+
+        setIsMobile(isNowMobile);
+
+        if (shouldFreeze) {
+            console.log('Applying frozen2 class');
+            document.body.classList.add('frozen2');
+        } else {
+            console.log('Removing frozen2 class');
+            document.body.classList.remove('frozen2');
+        }
+    };
+
+    window.addEventListener('resize', handleResize);
+    
+    // Call handleResize immediately to apply initial state
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+}, []);
+        
 
 
     return (

@@ -1330,6 +1330,13 @@ const BlunderPunisher = () => {
     
     const handleLineClick = (gameIDs) => {
         const combinedPgn = createPgnFromGameIDs(gameIDs, thePgnList);
+        
+        // Get the line details (opening + move sequence)
+        const selectedLine = filteredData.find(line => JSON.stringify(line.GameIDs) === JSON.stringify(gameIDs));
+        if (selectedLine) {
+            const importedOpening = formatMovesWithNumbers(selectedLine);
+            localStorage.setItem('importedOpening', importedOpening);
+        }
     
         // Store the combined PGN in localStorage
         localStorage.setItem('combinedPgn', combinedPgn);

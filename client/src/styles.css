@@ -26,6 +26,16 @@
   left: 0;
 }
 
+.frozen2 {
+  overflow-x: auto; /* Prevent horizontal scrolling */
+  position: relative; /* Freeze the viewport */
+  overflow-y: auto;
+  width: 1290px; /* Set fixed width */
+  height: 100%; /* Cover full height */
+  top: 0;
+  left: 0;
+}
+
 
 .hero {
     background-image: url('pls2.png'); /* Add background image */
@@ -390,11 +400,10 @@ nav ul li .prepare-link {
 
 .games-list {
     width: 27%; /* Adjust based on your preference */
-    height: 50vh; /* This makes the list take up most of the viewport height */
+    height: 37vh; /* This makes the list take up most of the viewport height */
     overflow-y: auto; /* Makes the list scrollable */
-    position: fixed; /* Keeps the list fixed on scroll */
+    position: relative; /* Keeps the list fixed on scroll */
     left: 18px; /* Aligns the list to the left */
-    top: 130px; /* Adjust based on your navbar height + Choose file */
   }
 
 .game-item {
@@ -455,12 +464,13 @@ nav ul li .prepare-link {
   }
 
   .control-panel {
-    position: fixed; /* Make the position fixed */
+    position: absolute; /* Make the position fixed */
     flex-direction: column;
     align-items: center;
     z-index: 1;
-    width: 30%;
-    left: 920px;
+    top:350px;
+    width: 360px;
+    left: 71%;
     height: 380px;
   }
   
@@ -480,21 +490,22 @@ nav ul li .prepare-link {
     }
     
     .control-panel button:hover {
-      
-
         background-color: #FF5733; /* Darker orange on hover */
     }
+
   
   .move-history {
-    position:  relative;
+    position:  absolute;
+    top: 134px;
     z-index: 2;
-    width: 24%; /* Adjust based on your layout */
+    width: 320px; /* Adjust based on your layout */
     overflow-y: auto;
     height: 169px; /* Adjust based on your layout */
     list-style-type: none;
-    left: 920px;
+    left: 73%;
     margin-bottom: 5px;
   }
+
   
   .move-history li {
     display: inline-block;
@@ -531,8 +542,13 @@ nav ul li .prepare-link {
     width: 100%; 
 }
 
+.file-buttons {
+  position:absolute;
+  top: 133px;
+  width: 1000px;
+  margin-left: 5px;
+}
 
-  
   .file-button {
     position:fixed;
     height: 70px;
@@ -996,7 +1012,6 @@ nav ul li .prepare-link {
 
 
 .black-upper-info-bar{
-  position: relative;
   font-size: 30px;
   height: 40px;
   position: absolute;
@@ -1008,8 +1023,8 @@ nav ul li .prepare-link {
   color:white;
 }
 .white-lower-info-bar{
-  top:0%;
-  position: relative;
+  top:304.5px;
+  position: absolute;
   font-size: 30px;
   width: 400px;
   padding-left: 5px;
@@ -1024,7 +1039,6 @@ nav ul li .prepare-link {
 }
 
 .white-upper-info-bar{
-  position: relative;
   font-size: 30px;
   height: 40px;
   position: absolute;
@@ -1039,8 +1053,8 @@ nav ul li .prepare-link {
   border-color: black;
 }
 .black-lower-info-bar{
-  top:0%;
-  position: relative;
+  top:304.5px;
+  position: absolute;
   font-size: 30px;
   width: 400px;
   padding-left: 5px;
@@ -1518,4 +1532,16 @@ nav ul {
   padding: 1rem;
   background: #ffebee;
   border-radius: 4px;
+}
+
+.imported-opening {
+  background-color: #3b80c9;
+  width: 400px;
+  color: white;
+  position: relative;
+  right: 0px;
+  font-size: 18px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
 }

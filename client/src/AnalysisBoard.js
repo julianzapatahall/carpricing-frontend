@@ -37,6 +37,7 @@ class AnalysisBoard extends Component {
     showEvaluation: false,
     moveHistory: [],
     fullGame: [],
+    importedOpening: localStorage.getItem('importedOpening') || "No Opening Loaded",
     importedGames: JSON.parse(localStorage.getItem('importedGames')) || [],
     showDropdown: false,
     selectedGame: null,
@@ -231,12 +232,15 @@ fetchChessComGames = async (username, maxGames = 1000) => {
 
   handleRemoveFile = () => {
     this.setState({
-      importedGames: [],
-      selectedGame: null,
-      fileInputKey: Date.now() // Reset the file input
+        importedGames: [],
+        selectedGame: null,
+        fileInputKey: Date.now(), 
+        importedOpening: "No Opening Loaded"
     });
+
     localStorage.removeItem('importedGames');
-  };
+    localStorage.removeItem('importedOpening'); // Clear opening data
+};
 
   displayGameDetails = (pgn) => {
     const chess = new Chess();
@@ -775,9 +779,14 @@ extractTopLines = (line) => {
       ) : (
         <div>
           <div>
+          <div className="imported-opening">
+    <h3>Last Loaded Opening:</h3>
+    <p>{this.state.importedOpening}</p>
+</div>
           <div className="dropdown-header" onClick={this.toggleDropdown}>
             Imported Games: {importedGames.length}
           </div>
+          
           {showDropdown && (
             <div className="games-list">
             {importedGames.length === 0 ? (
@@ -841,17 +850,8 @@ extractTopLines = (line) => {
               />
             </div>
           </div>
-          {selectedGame && (
-  orientation === "white" ? (
-    <div className="black-upper-info-bar">
-      <span>{blackResult} {headers.Black} ({headers.BlackElo})</span>
-    </div>
-  ) : (
-    <div className="white-upper-info-bar">
-      <span>{whiteResult} {headers.White} ({headers.WhiteElo})</span>
-    </div>
-  )
-)}
+         
+        
 
           <div className="move-history">
             <ul>
@@ -872,18 +872,23 @@ extractTopLines = (line) => {
             </ul>
             
           </div>
-          {selectedGame && (
-  orientation === "white" ? (
-    <div className="white-lower-info-bar">
-      <span>{whiteResult} {headers.White} ({headers.WhiteElo})</span>
-    </div>
-    
-  ) : (
-    <div className="black-lower-info-bar">
-      <span>{blackResult} {headers.Black} ({headers.BlackElo})</span>
-    </div>
-  )
-)}
+          <div className={orientation === "white" ? "black-upper-info-bar" : "white-upper-info-bar"}>
+          <span>
+  {selectedGame
+    ? `${orientation === "white" ? blackResult : whiteResult} ${orientation === "white" ? headers.Black : headers.White} (${orientation === "white" ? headers.BlackElo : headers.WhiteElo})`
+    : orientation === "white" ? "Black" : "White"}
+</span>
+
+</div>
+
+<div className={orientation === "white" ? "white-lower-info-bar" : "black-lower-info-bar"}>
+  <span>
+    {selectedGame
+      ? `${orientation === "white" ? whiteResult : blackResult} ${orientation === "white" ? headers.White : headers.Black} (${orientation === "white" ? headers.WhiteElo : headers.BlackElo})`
+      : orientation === "white" ? "White" : "Black"}
+  </span>
+</div>
+
 
           <div className="control-panel">
             <button onClick={this.handleEditBoard}>Edit</button>

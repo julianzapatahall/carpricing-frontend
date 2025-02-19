@@ -691,6 +691,13 @@ const WeaknessFinder = () => {
     
     const handleLineClick = (gameIDs) => {
         const combinedPgn = createPgnFromGameIDs(gameIDs, thePgnList);
+        
+        // Get the line details (opening + move sequence)
+        const selectedLine = filteredData.find(line => JSON.stringify(line.GameIDs) === JSON.stringify(gameIDs));
+        if (selectedLine) {
+            const importedOpening = formatMovesWithNumbers(selectedLine);
+            localStorage.setItem('importedOpening', importedOpening);
+        }
     
         // Store the combined PGN in localStorage
         localStorage.setItem('combinedPgn', combinedPgn);
@@ -701,6 +708,7 @@ const WeaknessFinder = () => {
         // Redirect to analysis board
         window.location.href = 'https://checkmatewizard.com/#/analysis-board';
     };
+    
     
     const handleFilterClick = () => {
         setShowAdvancedFilter(true);
