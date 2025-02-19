@@ -33,6 +33,7 @@ useEffect(() => {
         } else {
             console.log('Removing frozen2 class');
             document.body.classList.remove('frozen2');
+            document.body.classList.remove('frozen');
         }
     };
 

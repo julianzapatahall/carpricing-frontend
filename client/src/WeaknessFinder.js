@@ -1273,7 +1273,7 @@ const WeaknessFinder = () => {
                                         <option value="Black">Black</option>
                                     </select>
                                 </div>
-                                <button onClick={handleStart} className="spec-button" style={{ marginTop: 6.5, marginLeft: 10 }}>Start</button>
+                                <button onClick={handleStart} className="spec-button" style={{ marginTop: 6.5, marginLeft: 10, color:'white',backgroundColor:'green' }}>Start</button>
                                 <button onClick={handleReset} className="spec-button" style={{ marginTop: 6.5, marginLeft: 10 }}>Reset</button>
                             </div>
                             

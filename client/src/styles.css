@@ -147,7 +147,7 @@
 }
 
 .tab button.active, .tab button:hover {
-  background-color: #FF5733;
+  background-color: #FFAA33;
   color: #fff;
 }
 
@@ -1102,7 +1102,8 @@ button {
 }
 
 button:hover {
-  background-color: #FF5733;
+  background-color: #FFAA33;
+  color: #fff;
 }
 
 
@@ -1284,7 +1285,7 @@ footer p {
   top:190px;
   width: 60px;
   height: 60px;
-  background-color: lightgreen;
+  background-color: #225080;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1302,7 +1303,7 @@ footer p {
   top:190px;
   width: 60px;
   height: 60px;
-  background-color: lightgreen;
+  background-color: #225080;
   display: flex;
   align-items: center;
   justify-content: center;
