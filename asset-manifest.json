@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5fa07bf5.css",
-    "main.js": "/static/js/main.a4b88fa0.js",
+    "main.css": "/static/css/main.07dd9d25.css",
+    "main.js": "/static/js/main.67d40740.js",
     "static/js/453.89f587e0.chunk.js": "/static/js/453.89f587e0.chunk.js",
     "static/media/notgonnawork.png": "/static/media/notgonnawork.dbb17e872ca2ce4896ab.png",
     "static/media/much_darker_green_notgonnawork.png": "/static/media/much_darker_green_notgonnawork.1224be07323c6f173abe.png",
@@ -10,12 +10,12 @@
     "static/media/checkmatewizard_transparent.png": "/static/media/checkmatewizard_transparent.67b32b5cc0bf85feadf7.png",
     "static/media/squarechesslogolongwhite.png": "/static/media/squarechesslogolongwhite.c6f47f048bf2d1757a80.png",
     "index.html": "/index.html",
-    "main.5fa07bf5.css.map": "/static/css/main.5fa07bf5.css.map",
-    "main.a4b88fa0.js.map": "/static/js/main.a4b88fa0.js.map",
+    "main.07dd9d25.css.map": "/static/css/main.07dd9d25.css.map",
+    "main.67d40740.js.map": "/static/js/main.67d40740.js.map",
     "453.89f587e0.chunk.js.map": "/static/js/453.89f587e0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5fa07bf5.css",
-    "static/js/main.a4b88fa0.js"
+    "static/css/main.07dd9d25.css",
+    "static/js/main.67d40740.js"
   ]
 }
