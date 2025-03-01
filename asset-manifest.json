@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.8bf59c87.css",
-    "main.js": "/static/js/main.a4debf82.js",
+    "main.css": "/static/css/main.f5023735.css",
+    "main.js": "/static/js/main.302e2b7e.js",
     "static/js/453.89f587e0.chunk.js": "/static/js/453.89f587e0.chunk.js",
     "static/media/notgonnawork.png": "/static/media/notgonnawork.dbb17e872ca2ce4896ab.png",
     "static/media/much_darker_green_notgonnawork.png": "/static/media/much_darker_green_notgonnawork.1224be07323c6f173abe.png",
     "static/media/pls2.png": "/static/media/pls2.0ffc4095e91c0231b228.png",
+    "static/media/pixelart3.png": "/static/media/pixelart3.1220b027a8b4f735b591.png",
     "static/media/squarechesslogolong.png": "/static/media/squarechesslogolong.b8525b1d001ae9cadc6c.png",
     "static/media/checkmatewizard_transparent.png": "/static/media/checkmatewizard_transparent.67b32b5cc0bf85feadf7.png",
     "static/media/squarechesslogolongwhite.png": "/static/media/squarechesslogolongwhite.c6f47f048bf2d1757a80.png",
     "index.html": "/index.html",
-    "main.8bf59c87.css.map": "/static/css/main.8bf59c87.css.map",
-    "main.a4debf82.js.map": "/static/js/main.a4debf82.js.map",
+    "main.f5023735.css.map": "/static/css/main.f5023735.css.map",
+    "main.302e2b7e.js.map": "/static/js/main.302e2b7e.js.map",
     "453.89f587e0.chunk.js.map": "/static/js/453.89f587e0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8bf59c87.css",
-    "static/js/main.a4debf82.js"
+    "static/css/main.f5023735.css",
+    "static/js/main.302e2b7e.js"
   ]
 }
